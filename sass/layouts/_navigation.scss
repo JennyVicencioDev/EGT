@@ -1,0 +1,194 @@
+@use "../utils/variables";
+
+.main-menu {
+	box-shadow: 0px 4px 4px 0px #0000001A;
+	background-color: variables.$white;
+	position: relative;
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		li {
+			&:hover,
+			&:focus {
+				font-weight: 700;
+	
+				& ul.main-menu-submenu {
+					display: block;
+				}
+			}
+		}
+	}
+
+	ul.main-menu-submenu {
+		background-color: variables.$primary;
+		color: variables.$white;
+		position: relative;
+		display: none;
+		padding: 0;
+		text-align: center;
+		a {
+			color: variables.$white;
+			font-weight: 400;
+			line-height: 2;
+			padding: 0;
+		}
+	}
+
+	a {
+		text-align: center;
+		text-decoration: none;
+		white-space: nowrap;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	&__links {
+		width: 100%;
+		
+	}
+	&__profile {
+		svg {
+			color: variables.$primary;
+		}
+		ul {
+			display: none;
+
+			li {
+				background-color: inherit;
+				position: relative;
+				&:hover {
+					background-color: variables.$primary;
+					color: variables.$white;
+					svg {
+						color: variables.$white;
+					}
+					a {
+						background-color: variables.$primary;
+						color: variables.$white;
+						font-weight: 400;
+						text-decoration: none;
+					}
+				}
+				& ul.main-menu-submenu {
+					right: 0;
+					width: 100%;
+				}
+			}
+		}
+
+		a {
+			color: variables.$primary;
+			padding: 1rem;
+			
+			&.btn-message {
+				position: relative;
+
+				.notification-badge {
+					display: none;
+					background-color: variables.$red-condor;
+					color: variables.$white;
+					font-size: 8px;
+					text-align: center;
+					height: 12px;
+					width: 12px;
+					position: absolute;
+					top: 16px;
+					right: 16px;
+					border-radius: 50%;
+				}
+
+				&.has-message {
+					.notification-badge {
+						display: block;
+					}
+				}
+			}
+			
+		}
+	}
+	
+	@media screen and (min-width: 992px) {
+		ul {
+			li {
+				&:hover {
+					& ul.main-menu-submenu {
+						left: auto;
+						opacity: 1;
+						z-index: 10;
+						transform: rotateY(0deg);
+
+					}
+				}
+			}
+		}
+		ul.main-menu-submenu {
+			background-color: variables.$primary;
+			border-radius: 0px 0px 8px 8px;
+			color: variables.$white;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			display: block;
+			opacity: 0;
+			padding: .5rem 1.5rem;
+			text-align: left;
+			a {
+				color: variables.$white;
+			}
+		}
+		ul.navbar-nav {
+			a {
+				position: relative;
+				&::after {
+					content: '';
+					background-color: variables.$primary;
+					position: absolute;
+					top: 75%;
+					left: 0;
+					height: 1px;
+					width: 0%;
+					transition: width 0.2s ease-in-out;
+				}
+				&:hover {
+					&::after {
+						width: 100%;
+					}
+				}
+			}
+
+			ul {
+				li {
+					&:hover {
+						& ul.main-menu-submenu {
+							transform: rotateY(0deg);
+						}
+					}
+				}
+			}
+
+			ul.main-menu-submenu {
+				transform: rotateY(-90deg);
+				transition: transform 0.2s ease-in;
+			}
+		}
+		a {
+			padding: 1rem;
+		}
+		&__links {
+			width: auto;
+			margin-right: auto;
+		}
+		&__profile {
+			order: 4;
+			border-left: 2px solid variables.$primary;
+			width: auto;
+			ul {
+				display: flex;
+			}
+		}
+	}
+}

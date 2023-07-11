@@ -1,0 +1,13 @@
+@use "../utils/variables";
+
+.btn {
+   &-primary {
+      --condor-btn-hover-color: #A561B7;
+      --condor-btn-hover-bg: #fff;
+   }
+
+   &-secondary {
+      --condor-btn-hover-color: #FFC629;
+      --condor-btn-hover-bg: #fff;
+   }
+}

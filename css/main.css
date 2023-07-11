@@ -1,0 +1,25 @@
+/*!
+Theme Name: Nombre de proyecto
+Author: Agencia Rompecabeza Digital
+Author URI: https://www.rompecabeza.cl/
+Description: Proyecto base Rompecabeza.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+--------------------------------------------------------------
+# Abstracts
+	- Variables
+   - Mixins
+# Layouts
+	- Navigation
+	- Footer
+# Components
+	- Posts and pages
+# Pages
+	- Home
+--------------------------------------------------------------
+*/html{-webkit-box-sizing:border-box;box-sizing:border-box}*,::after,::before{-webkit-box-sizing:inherit;box-sizing:inherit}iframe,img{max-width:100%}::-webkit-scrollbar{height:8px;width:8px}main ::-webkit-scrollbar{height:6px;width:6px}::-webkit-scrollbar-thumb{background:#404040;border-radius:0}::-webkit-scrollbar-thumb:active,::-webkit-scrollbar-thumb:hover{background-color:#737373}::-webkit-scrollbar-track{background:#d9d9d9}main ::-webkit-scrollbar-track{background:#d9d9d9;border-radius:10px;border:2px solid transparent;background-clip:content-box}::-webkit-scrollbar-track:active,::-webkit-scrollbar-track:hover::-webkit-scrollbar-track:hover{background:#4d9ead}::-moz-selection{background-color:#a561b7;color:#fff}::selection{background-color:#a561b7;color:#fff}div p:last-child{margin-bottom:0}::-moz-selection{background-color:#a561b7;color:#fff}::selection{background-color:#a561b7;color:#fff}.main-menu{-webkit-box-shadow:0 4px 4px 0 rgba(0,0,0,.1019607843);box-shadow:0 4px 4px 0 rgba(0,0,0,.1019607843);background-color:#fff;position:relative}.main-menu ul{list-style:none;padding:0;margin:0}.main-menu ul li:focus,.main-menu ul li:hover{font-weight:700}.main-menu ul li:focus ul.main-menu-submenu,.main-menu ul li:hover ul.main-menu-submenu{display:block}.main-menu ul.main-menu-submenu{background-color:#a561b7;color:#fff;position:relative;display:none;padding:0;text-align:center}.main-menu ul.main-menu-submenu a{color:#fff;font-weight:400;line-height:2;padding:0}.main-menu a{text-align:center;text-decoration:none;white-space:nowrap}.main-menu a:hover{text-decoration:none}.main-menu__links{width:100%}.main-menu__profile svg{color:#a561b7}.main-menu__profile ul{display:none}.main-menu__profile ul li{background-color:inherit;position:relative}.main-menu__profile ul li:hover{background-color:#a561b7;color:#fff}.main-menu__profile ul li:hover svg{color:#fff}.main-menu__profile ul li:hover a{background-color:#a561b7;color:#fff;font-weight:400;text-decoration:none}.main-menu__profile ul li ul.main-menu-submenu{right:0;width:100%}.main-menu__profile a{color:#a561b7;padding:1rem}.main-menu__profile a.btn-message{position:relative}.main-menu__profile a.btn-message .notification-badge{display:none;background-color:red;color:#fff;font-size:8px;text-align:center;height:12px;width:12px;position:absolute;top:16px;right:16px;border-radius:50%}.main-menu__profile a.btn-message.has-message .notification-badge{display:block}@media screen and (min-width:992px){.main-menu ul li:hover ul.main-menu-submenu{left:auto;opacity:1;z-index:10;-webkit-transform:rotateY(0);transform:rotateY(0)}.main-menu ul.main-menu-submenu{background-color:#a561b7;border-radius:0 0 8px 8px;color:#fff;position:absolute;top:100%;left:0;display:block;opacity:0;padding:.5rem 1.5rem;text-align:left}.main-menu ul.main-menu-submenu a{color:#fff}.main-menu ul.navbar-nav a{position:relative}.main-menu ul.navbar-nav a::after{content:"";background-color:#a561b7;position:absolute;top:75%;left:0;height:1px;width:0%;-webkit-transition:width .2s ease-in-out;transition:width .2s ease-in-out}.main-menu ul.navbar-nav a:hover::after{width:100%}.main-menu ul.navbar-nav ul li:hover ul.main-menu-submenu{-webkit-transform:rotateY(0);transform:rotateY(0)}.main-menu ul.navbar-nav ul.main-menu-submenu{-webkit-transform:rotateY(-90deg);transform:rotateY(-90deg);-webkit-transition:-webkit-transform .2s ease-in;transition:-webkit-transform .2s ease-in;transition:transform .2s ease-in;transition:transform .2s ease-in,-webkit-transform .2s ease-in}.main-menu a{padding:1rem}.main-menu__links{width:auto;margin-right:auto}.main-menu__profile{-webkit-box-ordinal-group:5;-ms-flex-order:4;order:4;border-left:2px solid #a561b7;width:auto}.main-menu__profile ul{display:-webkit-box;display:-ms-flexbox;display:flex}}.btn-primary{--condor-btn-hover-color:#A561B7;--condor-btn-hover-bg:#fff}.btn-secondary{--condor-btn-hover-color:#FFC629;--condor-btn-hover-bg:#fff}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/base-styles.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Condor New Zeus</title>
+</head>
+<body>
+  <div class="main-menu">
+    <nav class="navbar navbar-expand-lg navbar-light p-lg-0">
+        <div class="container-xxl">
+            <div class="main-menu__logo">
+              <a class="navbar-brand" href="./index.html">
+                <img src="./img/logo-condor-dark.svg" alt="logo Condor">
+              </a>
+            </div>
+            <div class="main-menu__profile">
+              <ul>
+                <li>
+                  <!-- eliminar class 'has message' si no hay mensajes -->
+                  <a href="/notifications" class="btn-message has-message" aria-label="Toggle navigation">
+                    <span class="iconify notification-icon" data-icon="eva:message-circle-fill" data-width="32" data-height="32">2</span>
+                    <span class="notification-badge">2</span>
+                  </a>
+                </li>
+                <li>
+                   <a nohref class="btn-profile" aria-label="Toggle navigation">
+                    <span class="iconify me-2" data-icon="fa-solid:user-circle" data-width="32" data-height="32"></span>Lorem Ipsum
+                  </a>
+                  <ul class="main-menu-submenu">
+                    <li>
+                      <a href="">Editar Perfil</a>
+                    </li>
+                    <li>
+                      <a href="">Cerrar sesión</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="main-menu__toggler">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarID"
+                  aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+            <div class="main-menu__links">
+              <div class="collapse navbar-collapse" id="navbarID">
+                  <ul class="navbar-nav">
+                    <li>
+                      <a class="nav-link" aria-current="page" href="#">Boletos</a>
+                    </li>
+                    <li>
+                      <a class="nav-link active" aria-current="page" href="#">Pasajes</a>
+                      <ul class="main-menu-submenu">
+                        <li>
+                          <a href="/venta">Venta</a>
+                        </li>
+                        <li>
+                          <a href="/reserva">Reserva</a>
+                        </li>
+                        <li>
+                          <a href="/tour-club">Tour club</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a class="nav-link" aria-current="page" href="#">E-Tickets</a></li>
+                    <li><a class="nav-link" aria-current="page" href="#">Otras ventas y servicios</a></li>
+                    <li><a class="nav-link" aria-current="page" href="#">Confirmación pasaje</a></li>
+                  </ul>
+              </div>
+            </div>
+        </div>
+    </nav>
+  </div>
+  
+  <button type="button" class="btn btn-primary">Button</button>
+  <button type="button" class="btn btn-secondary">Button</button>
+  <button type="button" class="btn btn-outline-primary">Button</button>
+  <div class="input-group mb-3">
+    <button class="btn btn-outline-secondary" type="button" id="">Button</button>
+    <input type="text" class="form-control" placeholder="" aria-label="Button" aria-describedby="">
+  </div>
+  <a href="#" class="btn btn-primary disabled" role="button">Button</a>
+  <div class="mb-3">
+    <label for="" class="form-label">Name</label>
+    <input type="text"
+      class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+    <small id="helpId" class="form-text text-muted">Help text</small>
+  </div>
+
+  
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="" aria-label="Button" aria-describedby="">
+    <button class="btn btn-outline-secondary" type="button" id="">Button</button>
+  </div>
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+  <script src="./js/base-scripts.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>

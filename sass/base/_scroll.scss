@@ -1,0 +1,43 @@
+@use "../utils/variables";
+
+/* Scroll */
+::-webkit-scrollbar {
+   height: 8px;
+   width: 8px;
+   main & {
+      height: 6px;
+      width: 6px;
+   }
+}
+::-webkit-scrollbar-thumb {
+   background: variables.$gray-800;
+   border-radius: 0;
+}
+::-webkit-scrollbar-thumb:active,
+::-webkit-scrollbar-thumb:hover {
+   background-color: variables.$gray-600;
+}
+::-webkit-scrollbar-track {
+   background: variables.$gray-200;
+   main & {
+      background: variables.$gray-200;
+      border-radius: 10px;
+      border: 2px solid transparent;
+      background-clip: content-box;
+   }
+}
+ 
+::-webkit-scrollbar-track:hover::-webkit-scrollbar-track:hover, 
+::-webkit-scrollbar-track:active {
+   background: #4D9EAD;
+}
+ 
+/* Selection */
+ ::selection {
+   background-color: variables.$primary;
+   color: variables.$white;
+}
+
+div p:last-child {
+   margin-bottom: 0;
+}
