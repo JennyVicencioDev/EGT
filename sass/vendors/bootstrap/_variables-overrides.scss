@@ -38,6 +38,7 @@ $grays: (
 // scss-docs-start color-variables
 $dark-purple-condor:  #622A74;
 $purple-condor:  #A561B7;
+$blue-condor: #5599FF;
 // $pink:    #d63384;
 $red:     #FF0000;
 $orange:  #fd7e14;
@@ -50,15 +51,16 @@ $cyan:    #0dcaf0;
 
 // scss-docs-start colors-map
 $colors: (
-  "dark-purple":     $dark-purple-condor,
-  "purple":     $purple-condor,
-  "yellow":  #FFC629,
-  "red":        $red,
-  "green":      $green,
-  "black":      $black,
-  "white":      $white,
-  "gray":       $gray-600,
-  "gray-dark":  $gray-800
+  "dark-purple": $dark-purple-condor,
+  "purple":      $purple-condor,
+  "yellow":      $yellow-condor,
+  "blue":        $blue-condor,
+  "red":         $red,
+  "green":       $green,
+  "black":       $black,
+  "white":       $white,
+  "gray":        $gray-600,
+  "gray-dark":   $gray-800
 );
 // scss-docs-end colors-map
 
@@ -221,7 +223,7 @@ $escaped-characters: (
 
 $enable-caret:                true;
 $enable-rounded:              true;
-$enable-shadows:              false;
+$enable-shadows:              true;
 $enable-gradients:            false;
 $enable-transitions:          true;
 $enable-reduced-motion:       true;
@@ -238,7 +240,7 @@ $enable-important-utilities:  true;
 
 // Prefix for :root CSS variables
 
-$variable-prefix:             condor-; // Deprecated in v5.2.0 for the shorter `$prefix`
+$variable-prefix:             egt-; // Deprecated in v5.2.0 for the shorter `$prefix`
 $prefix:                      $variable-prefix;
 
 // Gradient
@@ -377,7 +379,7 @@ $border-color-translucent:    rgba($black, .175);
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-$border-radius:               .375rem;
+$border-radius:               .625rem;
 $border-radius-sm:            .25rem;
 $border-radius-lg:            .5rem;
 $border-radius-xl:            1rem;
@@ -476,7 +478,7 @@ $font-sizes: (
 // scss-docs-end font-sizes
 
 // scss-docs-start headings-variables
-$headings-margin-bottom:      $spacer * .5;
+$headings-margin-bottom:      $spacer * 1;
 $headings-font-family:        null;
 $headings-font-style:         null;
 $headings-font-weight:        700;
@@ -1123,16 +1125,16 @@ $placeholder-opacity-min:           .2;
 
 // scss-docs-start card-variables
 $card-spacer-y:                     $spacer;
-$card-spacer-x:                     $spacer;
+$card-spacer-x:                     $spacer * 1.5;
 $card-title-spacer-y:               $spacer * .5;
 $card-border-width:                 $border-width;
 $card-border-color:                 var(--#{$prefix}border-color-translucent);
 $card-border-radius:                $border-radius;
-$card-box-shadow:                   null;
+$card-box-shadow:                   0px 4px 4px 0px rgba($black, 0.4);
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width);
 $card-cap-padding-y:                $card-spacer-y * .5;
 $card-cap-padding-x:                $card-spacer-x;
-$card-cap-bg:                       rgba($black, .03);
+$card-cap-bg:                       transparent; //rgba($black, .03)
 $card-cap-color:                    null;
 $card-height:                       null;
 $card-color:                        null;
@@ -1406,7 +1408,7 @@ $figure-caption-color:              $gray-600;
 // Breadcrumbs
 
 // scss-docs-start breadcrumb-variables
-$breadcrumb-font-size:              null;
+$breadcrumb-font-size:              0.875rem;
 $breadcrumb-padding-y:              0;
 $breadcrumb-padding-x:              0;
 $breadcrumb-item-padding-x:         .5rem;

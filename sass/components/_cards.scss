@@ -1,0 +1,50 @@
+@use "../utils/variables";
+
+.card {
+   &-condor {
+      max-width: 100%;
+   }
+
+   &-seats {
+      &--num {
+         margin: auto;
+         width: 200px;
+
+         .input-seat-num {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+         }
+
+         input {
+            background-color: inherit;
+            border-width: 0 0 3px 0;
+            border-bottom: 3px solid variables.$gray-600;
+            border-radius: 0;
+            box-shadow: none;
+            font-size: 2rem;
+            text-align: center;
+            width: 50px;
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+               -webkit-appearance: none;
+               margin: 0;
+            }
+         }
+      }
+      &--simb {
+         margin-bottom: 1rem;
+      }
+      &--select {
+         
+      }
+      &--simb,
+      &--select {
+         width: 360px;
+         h3 {
+            font-size: 1.25rem;
+            font-weight: 500;
+         }
+      }
+   } 
+} 

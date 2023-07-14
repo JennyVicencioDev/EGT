@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/base-styles.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Condor - Pasajes</title>
+</head>
+<body>
+  <div class="main-menu">
+    <nav class="navbar navbar-expand-lg navbar-light p-lg-0">
+        <div class="container-fluid">
+            <div class="main-menu__logo">
+              <a class="navbar-brand" href="./index.html">
+                <img src="./img/logo-condor-dark.svg" alt="logo Condor">
+              </a>
+            </div>
+            <div class="main-menu__profile">
+              <ul>
+                <li>
+                  <!-- eliminar class 'has message' si no hay mensajes -->
+                  <a href="/notifications" class="btn-message has-message" aria-label="Toggle navigation">
+                    <span class="iconify notification-icon" data-icon="eva:message-circle-fill" data-width="32" data-height="32">2</span>
+                    <span class="notification-badge">2</span>
+                  </a>
+                </li>
+                <li>
+                   <a nohref class="btn-profile" aria-label="Toggle navigation">
+                    <span class="iconify me-2" data-icon="fa-solid:user-circle" data-width="32" data-height="32"></span>Lorem Ipsum
+                  </a>
+                  <ul class="main-menu-submenu">
+                    <li>
+                      <a href="">Editar Perfil</a>
+                    </li>
+                    <li>
+                      <a href="">Cerrar sesión</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="main-menu__toggler">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarID"
+                  aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+            <div class="main-menu__links">
+              <div class="collapse navbar-collapse" id="navbarID">
+                  <ul class="navbar-nav">
+                    <li>
+                      <a class="nav-link" aria-current="page" href="#">Boletos</a>
+                    </li>
+                    <li>
+                      <a class="nav-link active" aria-current="page" href="#">Pasajes</a>
+                      <ul class="main-menu-submenu">
+                        <li>
+                          <a href="/venta">Venta</a>
+                        </li>
+                        <li>
+                          <a href="/reserva">Reserva</a>
+                        </li>
+                        <li>
+                          <a href="/tour-club">Tour club</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a class="nav-link" aria-current="page" href="#">E-Tickets</a></li>
+                    <li><a class="nav-link" aria-current="page" href="#">Otras ventas y servicios</a></li>
+                    <li><a class="nav-link" aria-current="page" href="#">Confirmación pasaje</a></li>
+                  </ul>
+              </div>
+            </div>
+        </div>
+    </nav>
+  </div>
+  <main class="main-content">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Menú</a></li>
+          <li class="breadcrumb-item"><a href="/pasajes">Pasajes</a></li>
+          <li class="breadcrumb-item"><a href="/pasajes/venta">Venta</a></li>
+        </ul>
+      </nav>
+      <div class="row justify-content-center g-4">
+        <div class="col-12 col-sm-4 col-lg-2">
+          <h1>Pasajes</h1>
+          <div class="card card-condor card-seats--num">
+            <div class="card-body">
+              <p class="text-center">Digite el número de asiento</p>
+              <div class="input-seat-num" aria-describedby="número de asiento">
+                <input type="text" class="form-control" pattern="\d*" maxlength="1" minlength="1">
+                <input type="text" class="form-control" pattern="\d*" maxlength="1" minlength="1">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-auto col-sm-8 col-lg-4 mt-5 mt-lg-4">
+          <div class="seats-container">
+            <!-- Tab panes -->
+            <div class="bus-floors tab-content">
+              <div class="tab-pane active" id="first-floor" role="tabpanel">
+                <div class="bus-front">
+                  <div class="bus-steering-wheel">
+                    <img src="./img/steering-wheel.png" alt="volante del bus">
+                  </div>
+                  <div class="bus-type-name">Salón Semi Cama</div>
+                </div>
+                <div class="bus-seats-lines">
+                  <div class="seats-left">
+                    <span class="seat seat--blue">1</span>
+                    <span class="seat seat--blue">2</span>
+                    <span class="seat seat--purple">5</span>
+                    <span class="seat seat--purple">6</span>
+                    <span class="seat seat--purple">9</span>
+                    <span class="seat seat--purple">10</span>
+                    <span class="seat seat--locked">13</span>
+                    <span class="seat seat--locked">14</span>
+                    <span class="seat seat--purple">15</span>
+                    <span class="seat seat--purple">16</span>
+                    <span class="seat seat--na"></span>
+                    <span class="seat seat--na"></span>
+                    <span class="seat seat--purple">21</span>
+                    <span class="seat seat--purple">22</span>
+                    <span class="seat seat--purple">25</span>
+                    <span class="seat seat--purple">26</span>
+                    <span class="seat seat--purple">29</span>
+                    <span class="seat seat--purple">30</span>
+                    <span class="seat seat--purple">33</span>
+                    <span class="seat seat--purple">34</span>
+                    <span class="seat seat--green">37</span>
+                    <span class="seat seat--green">38</span>
+                    <span class="seat seat--green">41</span>
+                    <span class="seat seat--green">42</span>
+                    <span class="seat seat--green">45</span>
+                    <span class="seat seat--green">46</span>
+                  </div>
+                  <div class="seats-center">
+                    <span></span>
+                  </div>
+                  <div class="seats-right">
+                    <span class="seat seat--blue">3</span>
+                    <span class="seat seat--blue">4</span>
+                    <span class="seat seat--purple">7</span>
+                    <span class="seat seat--purple">8</span>
+                    <span class="seat seat--cashier"></span>
+                    <span class="seat seat--purple">12</span>
+                    <span class="bus-stairs">
+                      <img src="./img/bus-stairs.png" alt="escaleras a segundo piso">
+                    </span>
+                    <span class="seat seat--na"></span>
+                    <span class="seat seat--na"></span>
+                    <span class="seat seat--purple">23</span>
+                    <span class="seat seat--purple">24</span>
+                    <span class="seat seat--purple">27</span>
+                    <span class="seat seat--purple">28</span>
+                    <span class="seat seat--purple">31</span>
+                    <span class="seat seat--purple">32</span>
+                    <span class="seat seat--green">35</span>
+                    <span class="seat seat--green">36</span>
+                    <span class="seat seat--green">39</span>
+                    <span class="seat seat--green">40</span>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="second-floor" role="tabpanel">
+                <div class="bus-front">
+                  <div class="bus-steering-wheel">
+                    <img src="./img/steering-wheel.png" alt="volante del bus" class="opacity-0">
+                  </div>
+                  <div class="bus-type-name">Salón Semi Cama</div>
+                </div>
+                <div class="bus-seats-lines">
+                  <div class="seats-left">
+                    <span class="seat seat--blue">1</span>
+                    <span class="seat seat--blue">2</span>
+                    <span class="seat seat--purple">5</span>
+                    <span class="seat seat--purple">6</span>
+                    <span class="seat seat--purple">9</span>
+                    <span class="seat seat--purple">10</span>
+                    <span class="seat seat--locked">13</span>
+                    <span class="seat seat--locked">14</span>
+                    <span class="seat seat--purple">15</span>
+                    <span class="seat seat--purple">16</span>
+                    <span class="seat seat--na"></span>
+                    <span class="seat seat--na"></span>
+                    <span class="seat seat--purple">21</span>
+                    <span class="seat seat--purple">22</span>
+                    <span class="seat seat--purple">25</span>
+                    <span class="seat seat--purple">26</span>
+                    <span class="seat seat--purple">29</span>
+                    <span class="seat seat--purple">30</span>
+                    <span class="seat seat--purple">33</span>
+                    <span class="seat seat--purple">34</span>
+                    <span class="seat seat--green">37</span>
+                    <span class="seat seat--green">38</span>
+                    <span class="seat seat--green">41</span>
+                    <span class="seat seat--green">42</span>
+                    <span class="seat seat--green">45</span>
+                    <span class="seat seat--green">46</span>
+                  </div>
+                  <div class="seats-center">
+                    <span></span>
+                  </div>
+                  <div class="seats-right">
+                    <span class="seat seat--blue">3</span>
+                    <span class="seat seat--blue">4</span>
+                    <span class="seat seat--purple">7</span>
+                    <span class="seat seat--purple">8</span>
+                    <span class="seat seat--cashier"></span>
+                    <span class="seat seat--purple">12</span>
+                    <span class="bus-stairs">
+                      <img src="./img/bus-stairs.png" alt="escaleras a segundo piso" class="opacity-0">
+                    </span>
+                    <span class="seat seat--na"></span>
+                    <span class="seat seat--na"></span>
+                    <span class="seat seat--purple">23</span>
+                    <span class="seat seat--purple">24</span>
+                    <span class="seat seat--purple">27</span>
+                    <span class="seat seat--purple">28</span>
+                    <span class="seat seat--purple">31</span>
+                    <span class="seat seat--purple">32</span>
+                    <span class="seat seat--green">35</span>
+                    <span class="seat seat--green">36</span>
+                    <span class="seat seat--green">39</span>
+                    <span class="seat seat--green">40</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- List group -->
+            <ul class="bus-floors-select" role="tablist">
+              <li>
+                <a class="floor active" data-bs-toggle="list" href="#first-floor" role="tab">Primer piso</a>
+              </li>
+              <li>
+                <a class="floor" data-bs-toggle="list" href="#second-floor" role="tab">Segundo piso</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="row justify-content-center">
+            <div class="col-auto">
+              <div class="card card-condor card-seats--simb">
+                <div class="card-body">
+                  <h3>Simbología</h3>
+                  <div class="seats-simb-container">
+                    <ul class="seats-simb-list">
+                      <li><span class="seat seat--blue">10</span><strong>$22.800</strong></li>
+                      <li><span class="seat seat--green">10</span><strong>$20.700</strong></li>
+                      <li><span class="seat seat--purple">10</span><strong>$22.400</strong></li>
+                      <li><span class="seat seat--na"></span>No disponible</li>
+                      <li><span class="seat seat--purple selected">10</span>Seleccionado</li>
+                      <li><span class="seat seat--locked">14</span>Bloqueado</li>
+                      <li><span class="seat seat--cashier"></span>Cajero</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto">
+              <div class="card card-condor card-seats--select">
+                <div class="card-body">
+                  <h3>Asientos Seleccionados</h3>
+                  <div class="seats-summary">
+                    <table class="table mb-0">
+                      <tbody>
+                        <tr>
+                          <td class="passenger-num">Pasajero 1</td>
+                          <td class="passenger-seat">27</td>
+                        </tr>
+                        <tr>
+                          <td class="passenger-num">Pasajero 2</td>
+                          <td class="passenger-seat">28</td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <td><div class="bus-type-name">Semi Cama</div></td>
+                          <td>Total: <span class="total-num">$44.800</span></td>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-controls">
+        <div class="main-controls--buttons">
+          <div class="prev-button">
+            <a class="btn btn-outline-primary" href="#" role="button">Volver</a>
+          </div>
+          <div class="next-button">
+            <a class="btn btn-primary" href="#" role="button">Continuar</a>
+          </div>
+        </div>
+        <div class="main-controls--commands mt-4">
+          <div>Volver: F1</div>
+          <div>Cancelar(X): ESC</div>
+          <div>Siguiente: ENTER</div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+  <script src="./js/base-scripts.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
