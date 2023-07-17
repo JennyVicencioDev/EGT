@@ -162,14 +162,20 @@
 
    table {
       td {
-         vertical-align: middle;
          border-bottom-width: 0;
+      }
+      tbody {
+         td {
+            vertical-align: middle;
+            line-height: 1;
+         }
       }
       tfoot {
          border-top-color: variables.$primary;
          border-top-width: 2px;
          td {
             font-size: 1.125rem;
+            vertical-align: baseline;
          }
       }
    }
@@ -180,7 +186,7 @@
    }
    .total-num {
       font-weight: 700;
-      font-size: 1.875rem;
+      font-size: 1.75rem;
    }
 }
 
@@ -264,11 +270,36 @@
    }
 }
 
+.passengers-list-container {
+   .accordion-condor {
+      height: 680px;
+      overflow: auto;
+      padding-right: .5rem;
+   }
+}
+
+.passenger-data {
+   label {
+      width: 100%;
+      select {
+         border: 0;
+         color: inherit;
+         margin: 0;
+         width: inherit;
+         &:focus {
+            border: none;
+         }
+      }
+   }
+}
+
 // controles
 .main-controls {
    margin-top: 1rem;
+   margin-bottom: 2rem;
 
-   & > div {
+   &--buttons,
+   &--commands {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
@@ -284,9 +315,10 @@
    }
    
    @media screen and (min-width: 992px) {
-      margin-top: 0;
+      // margin-top: 0;
 
-      & > div {
+      &--buttons,
+      &--commands {
          flex-direction: row;
       }
    }

@@ -1,0 +1,19 @@
+@use "../utils/variables";
+
+.accordion-condor {
+
+   .accordion-item {
+      box-shadow: 0px 4px 4px 0px rgba(variables.$black, 0.40);
+      border: none;
+      &:not(:last-child) {
+         margin-bottom: 2rem;
+      }
+   }
+   .accordion-button {
+      background-color: variables.$primary;
+      border-radius: 8px;
+      box-shadow: 0px 4px 4px 0px rgba(variables.$black, 0.40);
+      color: variables.$white;
+      font-size: 1.25rem;
+   }
+}

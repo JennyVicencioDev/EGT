@@ -22,8 +22,9 @@
    main & {
       background: variables.$gray-200;
       border-radius: 10px;
-      border: 2px solid transparent;
-      background-clip: content-box;
+      // border: 2px solid transparent;
+      // background-clip: content-box;
+      margin-left: 1rem;
    }
 }
  
