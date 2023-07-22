@@ -24,7 +24,11 @@ gulp.task("sass", function(){
         .pipe(sourcemaps.init())
         .pipe(gulpsass())
         .pipe(autoprefixer("last 4 versions"))
-        .pipe(cleanCss({keepSpecialComments: 1}))
+        // .pipe(cleanCss({
+        //     keepSpecialComments: 1,
+        //     format: {breaks: {afterComment: true, afterAtRule: true, beforeComment: true}},
+        //     inline: ['none'],
+        // }))
         .pipe(sourcemaps.write("."))
         // .pipe(gulp.dest("."))
         // .pipe(rename("style-rtl.css"))

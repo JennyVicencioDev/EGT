@@ -27,18 +27,3 @@
       margin-left: 1rem;
    }
 }
- 
-::-webkit-scrollbar-track:hover::-webkit-scrollbar-track:hover, 
-::-webkit-scrollbar-track:active {
-   background: #4D9EAD;
-}
- 
-/* Selection */
- ::selection {
-   background-color: variables.$primary;
-   color: variables.$white;
-}
-
-div p:last-child {
-   margin-bottom: 0;
-}

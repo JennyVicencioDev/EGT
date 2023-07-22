@@ -116,7 +116,9 @@
   --#{$prefix}backdrop-bg: #{$modal-backdrop-bg};
   --#{$prefix}backdrop-opacity: #{$modal-backdrop-opacity};
   // scss-docs-end modal-backdrop-css-vars
-
+  backdrop-filter: blur(7.5px);
+  filter: blur(7%);
+  
   @include overlay-backdrop(var(--#{$prefix}backdrop-zindex), var(--#{$prefix}backdrop-bg), var(--#{$prefix}backdrop-opacity));
 }
 
@@ -132,7 +134,7 @@
   @include border-top-radius(var(--#{$prefix}modal-inner-border-radius));
 
   .btn-close {
-    padding: calc(var(--#{$prefix}modal-header-padding-y) * .5) calc(var(--#{$prefix}modal-header-padding-x) * .5);
+    padding: $btn-close-padding-y $btn-close-padding-x;
     margin: calc(-.5 * var(--#{$prefix}modal-header-padding-y)) calc(-.5 * var(--#{$prefix}modal-header-padding-x)) calc(-.5 * var(--#{$prefix}modal-header-padding-y)) auto;
   }
 }

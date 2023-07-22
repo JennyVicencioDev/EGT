@@ -7,7 +7,7 @@
 
 // scss-docs-start gray-color-variables
 $white:    #fff;
-$gray-100: #f2f2f2;
+$gray-100: #fafafa;
 $gray-200: #d9d9d9;
 $gray-300: #bfbfbf;
 $gray-400: #a6a6a6;
@@ -240,7 +240,7 @@ $enable-important-utilities:  true;
 
 // Prefix for :root CSS variables
 
-$variable-prefix:             egt-; // Deprecated in v5.2.0 for the shorter `$prefix`
+$variable-prefix:             bs-; // Deprecated in v5.2.0 for the shorter `$prefix`
 $prefix:                      $variable-prefix;
 
 // Gradient
@@ -716,7 +716,7 @@ $input-padding-y-lg:                    $input-btn-padding-y-lg;
 $input-padding-x-lg:                    $input-btn-padding-x-lg;
 $input-font-size-lg:                    $input-btn-font-size-lg;
 
-$input-bg:                              $body-bg;
+$input-bg:                              $white; //$body-bg;
 $input-disabled-color:                  null;
 $input-disabled-bg:                     $gray-200;
 $input-disabled-border-color:           null;
@@ -1028,7 +1028,7 @@ $dropdown-font-size:                $font-size-base;
 $dropdown-color:                    $body-color;
 $dropdown-bg:                       $white;
 $dropdown-border-color:             var(--#{$prefix}border-color-translucent);
-$dropdown-border-radius:            $border-radius;
+$dropdown-border-radius:            .5rem; // $border-radius;
 $dropdown-border-width:             $border-width;
 $dropdown-inner-border-radius:      subtract($dropdown-border-radius, $dropdown-border-width);
 $dropdown-divider-bg:               $dropdown-border-color;
@@ -1280,7 +1280,7 @@ $badge-border-radius:               $border-radius;
 // Modals
 
 // scss-docs-start modal-variables
-$modal-inner-padding:               $spacer;
+$modal-inner-padding:               1rem 2rem; // $spacer;
 
 $modal-footer-margin-between:       .5rem;
 
@@ -1293,32 +1293,32 @@ $modal-content-color:               null;
 $modal-content-bg:                  $white;
 $modal-content-border-color:        var(--#{$prefix}border-color-translucent);
 $modal-content-border-width:        $border-width;
-$modal-content-border-radius:       $border-radius-lg;
+$modal-content-border-radius:       2.5rem; // $border-radius-lg;
 $modal-content-inner-border-radius: subtract($modal-content-border-radius, $modal-content-border-width);
-$modal-content-box-shadow-xs:       $box-shadow-sm;
-$modal-content-box-shadow-sm-up:    $box-shadow;
+$modal-content-box-shadow-xs:       -4px -2px 7px 0px $gray-800 inset; // $box-shadow-sm;
+$modal-content-box-shadow-sm-up:    -4px -2px 7px 0px $gray-800 inset; // $box-shadow;
 
-$modal-backdrop-bg:                 $black;
+$modal-backdrop-bg:                 $gray-600;
 $modal-backdrop-opacity:            .5;
 
 $modal-header-border-color:         var(--#{$prefix}border-color);
-$modal-header-border-width:         $modal-content-border-width;
+$modal-header-border-width:         0; //$modal-content-border-width;
 $modal-header-padding-y:            $modal-inner-padding;
 $modal-header-padding-x:            $modal-inner-padding;
 $modal-header-padding:              $modal-header-padding-y $modal-header-padding-x; // Keep this for backwards compatibility
 
 $modal-footer-bg:                   null;
 $modal-footer-border-color:         $modal-header-border-color;
-$modal-footer-border-width:         $modal-header-border-width;
+$modal-footer-border-width:         0; //$modal-header-border-width;
 
 $modal-sm:                          300px;
-$modal-md:                          500px;
+$modal-md:                          600px;
 $modal-lg:                          800px;
 $modal-xl:                          1140px;
 
-$modal-fade-transform:              translate(0, -50px);
-$modal-show-transform:              none;
-$modal-transition:                  transform .3s ease-out;
+$modal-fade-transform:              scale(20%);
+$modal-show-transform:              scale(100%);
+$modal-transition:                  transform .2s ease-out;
 $modal-scale-transform:             scale(1.02);
 // scss-docs-end modal-variables
 
@@ -1412,8 +1412,8 @@ $figure-caption-color:              $gray-600;
 $breadcrumb-font-size:              0.875rem;
 $breadcrumb-padding-y:              0;
 $breadcrumb-padding-x:              0;
-$breadcrumb-item-padding-x:         .5rem;
-$breadcrumb-margin-bottom:          1rem;
+$breadcrumb-item-padding-x:         .25rem;
+$breadcrumb-margin-bottom:          .5rem;
 $breadcrumb-bg:                     null;
 $breadcrumb-divider-color:          $gray-600;
 $breadcrumb-active-color:           $gray-600;
@@ -1479,14 +1479,14 @@ $spinner-border-width-sm: .2em;
 // Close
 
 // scss-docs-start close-variables
-$btn-close-width:            1em;
+$btn-close-width:            .75em;
 $btn-close-height:           $btn-close-width;
-$btn-close-padding-x:        .25em;
+$btn-close-padding-x:        6px;
 $btn-close-padding-y:        $btn-close-padding-x;
-$btn-close-color:            $black;
+$btn-close-color:            $white;
 $btn-close-bg:               url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>");
 $btn-close-focus-shadow:     $input-btn-focus-box-shadow;
-$btn-close-opacity:          .5;
+$btn-close-opacity:          1;
 $btn-close-hover-opacity:    .75;
 $btn-close-focus-opacity:    1;
 $btn-close-disabled-opacity: .25;

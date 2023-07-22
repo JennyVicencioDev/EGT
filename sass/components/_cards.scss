@@ -1,12 +1,9 @@
 @use "../utils/variables";
 
 .card {
-   // Card Condor gral
-   &-condor {
-      max-width: 100%;
-   }
+   max-width: 100%;
 
-   // Card Pasajes
+   // Card Asientos
    &-seats {
       &--num {
          margin: auto;
@@ -46,4 +43,12 @@
          }
       }
    } 
+
+   // Card Itinerario
+   &-itinerary {
+      .card-body {
+         padding: 1rem 8%;
+      }
+
+   }
 } 

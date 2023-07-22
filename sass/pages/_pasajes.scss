@@ -1,5 +1,225 @@
 @use "../utils/variables";
 
+
+// RUTAS Y HORARIOS
+
+.itinerary-filter {
+   padding: 2rem 0;
+
+   label {
+      font-size: 1.875rem;
+      line-height: 1;
+   }
+}
+.itinerary-list {
+   &-orderby {
+      display: block;
+      margin-left: auto;
+      margin-bottom: 1rem;
+      width: fit-content;
+
+      .form-select {
+         background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='%23A561B7' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/></svg>");
+         color: variables.$primary;
+         border: 1px solid variables.$primary;
+         font-size: 1rem;
+         line-height: 1;
+      }
+   }
+
+   .card-itinerary {
+      margin-bottom: 1rem;
+      
+      &__route {
+         display: flex;
+         // flex-wrap: wrap;
+         justify-content: space-between;
+         align-items: center;
+         gap: 0.5rem;
+
+         .itinerary-from,
+         .itinerary-to {
+            span {
+               display: block;
+               line-height: normal;
+            }
+            .time {
+               strong {
+                  font-size: 1.5rem;
+               }
+            }
+            .from, .to {
+               font-size: 1.25rem;
+            }
+            .station {
+               font-weight: 300;
+            }
+         }
+         .itinerary-time {
+            font-size: 0.875rem;
+            text-align: center;
+         }
+
+         @media screen and (min-width: 992px) {
+            flex-wrap: nowrap;
+
+            .itinerary-from,
+            .itinerary-to {
+               .time {
+                  strong {
+                     font-size: 1.875rem;
+                  }
+               }
+            }
+         }
+      }
+      &__info {
+         display: flex;
+         flex-direction: column;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         align-items: baseline;
+         padding-top: 1rem;
+         padding-bottom: 1rem;
+         .itinerary-price {
+            span {
+               color: variables.$primary;
+               font-size: 1.25rem;
+               font-weight: 700;
+            }
+         }
+         .itinerary-date {
+            span {
+               color: inherit;
+               font-size: 1.25rem;
+               font-weight: 400;
+            }
+         }
+
+         @media screen and (min-width: 992px) {
+            flex-direction: row;
+         }
+      }
+      &__details {
+         position: relative;
+         text-align: center;
+
+         a {
+            text-decoration: underline;
+            cursor: pointer;
+         }
+
+         .bus-logo {
+            position: absolute;
+            width: 85px;
+            height: auto;
+            left: 0;
+            bottom: 4px;
+         }
+      }
+   }
+}
+
+.itinerary-detail {
+   margin: auto;
+   width: 60%;
+   .itinerary-seats {
+      font-size: 1.25rem;
+   }
+   .itinerary-date {
+      font-size: 1rem;
+   }
+   .itinerary-bus-type {
+      font-size: 1.25rem;
+   }
+   .itinerary-service {
+      font-size: 1.25rem;
+   }
+
+   .bus-logo {
+      display: inline-block;
+      vertical-align: inherit;
+      height: auto;
+      width: 100px;
+   }
+}
+
+.itinerary-route {
+   &-h {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      .sp {
+         background-color: variables.$primary;
+         height: 2px;
+         width: 24px;
+         display: inherit;
+      }
+   }
+   &-v {
+      display: flex;
+      flex-flow: row nowrap;
+      span {
+         display: block;
+         line-height: 1;
+         margin: 0 auto;
+         white-space: nowrap;
+      }
+      .sp {
+         background-color: variables.$primary;
+         height: 80px;
+         width: 2px;
+         display: inherit;
+      }
+      .route-time {
+         font-size: 1.25rem;
+         padding-left: .5rem;
+         span:first-child,
+         span:last-child {
+            font-weight: 700;
+         }
+      }
+      .route-fromto {
+         padding-left: 2rem;
+
+         .from, .st, .to {
+            font-size: 1.25rem;
+         }
+      }
+      .route-time,
+      .route-fromto {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+      }
+   }
+   &-h,
+   &-v {
+      .start {
+         background-color: variables.$primary;
+         border-radius: 50%;
+         height: 1rem;
+         width: 1rem;
+      }
+      .stop {
+         background-color: variables.$primary;
+         border-radius: 50%;
+         height: .5rem;
+         width: .5rem;
+      }
+      .end {
+         background-color: variables.$primary;
+         border-radius: 50%;
+         height: 1rem;
+         width: 1rem;
+      }
+   }
+}
+
+// ASIENTOS
+
 .bus-steering-wheel {
    display: inline-block;
    height: 40px;
@@ -19,7 +239,7 @@
       margin-right: .5rem;
    }
 }
-
+// alineación de asientos
 .seats-container {
    background-color: variables.$white;
    box-shadow: inset 0px -2px 0px 2px variables.$primary;
@@ -127,7 +347,6 @@
       }
    }
 }
-
 // simbología de asientos
 .seats-simb-container {
    & > * {
@@ -153,7 +372,6 @@
       }
    }
 }
-
 // resumen de asientos
 .seats-summary {
    .bus-type-name {
@@ -189,7 +407,6 @@
       font-size: 1.75rem;
    }
 }
-
 // tipos de asientos del bus
 .seat {
    border-radius: 6px;
@@ -270,8 +487,9 @@
    }
 }
 
+// PASAJEROS
 .passengers-list-container {
-   .accordion-condor {
+   .accordion {
       height: 680px;
       overflow: auto;
       padding-right: .5rem;
@@ -314,7 +532,7 @@
       font-weight: 700;
    }
    
-   @media screen and (min-width: 992px) {
+   @media screen and (min-width: 768px) {
       // margin-top: 0;
 
       &--buttons,
