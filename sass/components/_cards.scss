@@ -46,6 +46,8 @@
 
    // Card Itinerario
    &-itinerary {
+      background-color: variables.$white;
+
       .card-body {
          padding: 1rem 8%;
       }

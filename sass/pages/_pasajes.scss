@@ -2,7 +2,6 @@
 
 
 // RUTAS Y HORARIOS
-
 .itinerary-filter {
    padding: 2rem 0;
 
@@ -29,6 +28,25 @@
 
    .card-itinerary {
       margin-bottom: 1rem;
+      &:hover {
+         background-color: variables.$primary;
+         color: variables.$white;
+         border-color: variables.$primary;
+         span, p, a {
+            background-color: variables.$primary;
+            color: variables.$white!important;
+         }
+         .itinerary-route-h {
+            span {
+               background-color: variables.$white
+            }
+         }
+         .bus-type-name {
+            &::before {
+               content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='19' viewBox='0 0 24 19' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M18.5053 12.8721H13.5728V17.2616H12.9535C12.6093 17.2616 12.334 17.5445 12.334 17.8887C12.334 18.2328 12.6093 18.5157 12.9535 18.5157H19.1247C19.4689 18.5157 19.7442 18.2328 19.7442 17.8887C19.7442 17.5445 19.4689 17.2616 19.1247 17.2616H18.5053V12.8721Z' fill='%23FFFFFF'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M22.6423 12.7344V10.9909C22.6423 10.6773 22.4664 10.3868 22.1835 10.2568L20.2717 9.35434C20.027 9.25499 19.7594 9.20146 19.4917 9.20146H12.8004C12.3644 9.20146 11.9362 9.04086 11.6074 8.75024L3.05776 1.34006C2.7901 1.11064 2.39245 1.14888 2.17832 1.42418L1.37537 2.65539C1.16888 2.91539 1.19948 3.29776 1.44419 3.51953L10.7968 12.0538C10.9114 12.1533 11.0567 12.2144 11.2097 12.2144H19.6141C19.8053 12.2144 20.004 12.2527 20.1799 12.3215L21.9541 13.178C22.2829 13.3386 22.6576 13.0939 22.6576 12.7191L22.6423 12.7344ZM20.287 13.6522C20.027 13.5451 19.7517 13.4915 19.4688 13.4915H11.2021C10.7433 13.4915 10.3073 13.3233 9.97084 13.0097L0.618286 4.4678C-0.11585 3.79483 -0.207617 2.65539 0.404163 1.86772L1.20712 0.842987C1.85714 0.00944216 3.05011 -0.311741 3.84543 0.368864L12.395 7.7714C12.5021 7.86318 12.6474 7.91671 12.7927 7.91671H19.3387C19.7058 7.91671 20.0652 7.99319 20.3941 8.15379L23.1471 9.58377C23.4529 9.74437 23.6441 10.0579 23.6441 10.4097V13.1321C23.6441 14.0192 22.7647 14.631 21.9618 14.3098L20.287 13.6369V13.6522Z' fill='%23FFFFFF'/%3E%3C/svg%3E");
+            }
+         }
+      }
       
       &__route {
          display: flex;
@@ -120,29 +138,6 @@
    }
 }
 
-.itinerary-detail {
-   margin: auto;
-   width: 60%;
-   .itinerary-seats {
-      font-size: 1.25rem;
-   }
-   .itinerary-date {
-      font-size: 1rem;
-   }
-   .itinerary-bus-type {
-      font-size: 1.25rem;
-   }
-   .itinerary-service {
-      font-size: 1.25rem;
-   }
-
-   .bus-logo {
-      display: inline-block;
-      vertical-align: inherit;
-      height: auto;
-      width: 100px;
-   }
-}
 
 .itinerary-route {
    &-h {
@@ -217,6 +212,32 @@
       }
    }
 }
+
+
+.itinerary-detail {
+   margin: auto;
+   width: 60%;
+   .itinerary-seats {
+      font-size: 1.25rem;
+   }
+   .itinerary-date {
+      font-size: 1rem;
+   }
+   .itinerary-bus-type {
+      font-size: 1.25rem;
+   }
+   .itinerary-service {
+      font-size: 1.25rem;
+   }
+
+   .bus-logo {
+      display: inline-block;
+      vertical-align: inherit;
+      height: auto;
+      width: 100px;
+   }
+}
+
 
 // ASIENTOS
 
@@ -510,8 +531,6 @@
       }
    }
 }
-
-
 
 // controles
 .main-controls {
