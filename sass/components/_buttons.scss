@@ -10,4 +10,10 @@
       --bs-btn-hover-color: #FFC629;
       --bs-btn-hover-bg: #fff;
    }
+
+   &:hover {
+      svg {
+         color: inherit!important;
+      }
+   }
 }

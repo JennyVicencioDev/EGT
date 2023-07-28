@@ -304,7 +304,7 @@
           <a class="btn btn-outline-primary" href="pasajes-venta-horarios.html" role="button">Volver</a>
         </div>
         <div class="next-button">
-          <a class="btn btn-primary" href="pasajes-venta-pasajeros.html" role="button">Continuar</a>
+          <a class="btn btn-primary" href="#" role="button" data-bs-toggle="modal" data-bs-target="#seat-step-1">Continuar</a>
         </div>
       </div>
       <div class="main-controls--commands mt-4">
@@ -314,6 +314,231 @@
       </div>
     </div>
   </div>
+
+    <!-- Modal Asiento seleccionado -->
+    <div class="modal fade" id="seat-step-1" tabindex="-1" role="dialog" aria-labelledby="qué hacer con asiento seleccionado" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-title text-center">¿Qué desea hacer con este asiento?</div>
+            <div class="select-button-container">
+              <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#seat-step-2-vta">Vender</button>
+              <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#seat-step-2-res">Reservar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Asiento seleccionado - RUT Venta-->
+    <div class="modal fade" id="seat-step-2-vta" tabindex="-1" role="dialog" aria-labelledby="qué hacer con asiento seleccionado" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-title text-center">Ingrese rut del pasajero</div>
+            <div class="seat-rut">
+              <input type="text" class="form-control" id="asientoRutVta" aria-describedby="Rut del asiento" placeholder="xx.xxx.xxx-x" pattern="^(\d{1,2}(?:[\.]?\d{3}){2}-[\dkK])$">
+            </div>
+            <div class="select-button-container">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#seat-step-3-vta">Siguiente</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Asiento seleccionado - RUT Reserva-->
+    <div class="modal fade" id="seat-step-2-res" tabindex="-1" role="dialog" aria-labelledby="qué hacer con asiento seleccionado" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-title text-center">Ingrese rut del pasajero</div>
+            <div class="seat-rut">
+              <input type="text" class="form-control" id="asientoRutRes" aria-describedby="Rut del asiento" placeholder="xx.xxx.xxx-x" pattern="^(\d{1,2}(?:[\.]?\d{3}){2}-[\dkK])$">
+            </div>
+            <div class="select-button-container">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#seat-step-3-res">Siguiente</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Datos Pasajero - Form Venta -->
+    <div class="modal fade" id="seat-step-3-vta" tabindex="-1" role="dialog" aria-labelledby="qué hacer con asiento seleccionado" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mx-auto w-75">
+              <div class="modal-title">Datos del pasajero <br><span class="fs-6 d-block">Mantenga sus datos actualizados</span></div>
+              <form class="row g-3 needs-validation py-4" novalidate>
+                <div class="col-12">
+                  <label for="registroPasajeroNombre" class="form-label">Nombres</label>
+                  <input type="text" class="form-control" id="registroPasajeroNombre" value="Nombres" required>
+                </div>
+                <div class="col-12">
+                  <label for="registroPasajeroAp" class="form-label">Apellido</label>
+                  <div class="row">
+                    <div class="col-12 col-sm-6">
+                      <input type="text" class="form-control" id="registroPasajeroApP" value="Apellido 1" required>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                      <input type="text" class="form-control" id="registroPasajeroApM" value="Apellido 2" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label for="registroPasajeroRUT" class="form-label">R.U.T</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="registroPasajeroRUT" value="xx.xxx.xxx-x" required>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label for="registroPasajeroGenero" class="form-label">Género</label>
+                  <div class="row">
+                    <div class="col-auto">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="registroPasajeroGenero" id="registroPasajeroGeneroF" checked>
+                        <label class="form-check-label" for="registroPasajeroGeneroF">
+                          Femenino
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="registroPasajeroGenero" id="registroPasajeroGeneroM">
+                        <label class="form-check-label" for="registroPasajeroGeneroM">
+                          Masculino
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label for="registroPasajeroEmail" class="form-label">Email</label>
+                  <input type="text" class="form-control" id="registroPasajeroEmail" value="email@email.com" required>
+                </div>
+                <div class="col-12">
+                  <label for="registroPasajeroTel" class="form-label">Celular</label>
+                  <input type="text" class="form-control" id="registroPasajeroTel" placeholder="+569" value="+56987654321" required>
+                </div>
+                <div class="col-12 select-button-container justify-content-between">
+                  <button type="button" class="btn btn-outline-primary"><span class="iconify me-3" data-icon="heroicons:adjustments-horizontal" data-width="32" data-height="32"></span>Editar</button>
+                  <a href="pasajes-venta-pasajeros.html" type="submit" class="btn btn-primary">Siguiente</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Datos Pasajero - Form Reserva -->
+    <div class="modal fade" id="seat-step-3-res" tabindex="-1" role="dialog" aria-labelledby="qué hacer con asiento seleccionado" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mx-auto w-75">
+              <div class="modal-title">Datos del pasajero <br><span class="fs-6 d-block">Mantenga sus datos actualizados</span></div>
+              <form class="row g-3 needs-validation py-4" novalidate>
+                <div class="col-12">
+                  <label for="registroPasajeroNombre" class="form-label">Nombres</label>
+                  <input type="text" class="form-control" id="registroPasajeroNombre" value="Nombres" required>
+                </div>
+                <div class="col-12">
+                  <label for="registroPasajeroAp" class="form-label">Apellido</label>
+                  <div class="row">
+                    <div class="col-12 col-sm-6">
+                      <input type="text" class="form-control" id="registroPasajeroApP" value="Apellido 1" required>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                      <input type="text" class="form-control" id="registroPasajeroApM" value="Apellido 2" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label for="registroPasajeroRUT" class="form-label">R.U.T</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="registroPasajeroRUT" value="xx.xxx.xxx-x" required>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label for="registroPasajeroGenero" class="form-label">Género</label>
+                  <div class="row">
+                    <div class="col-auto">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="registroPasajeroGenero" id="registroPasajeroGeneroF" checked>
+                        <label class="form-check-label" for="registroPasajeroGeneroF">
+                          Femenino
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="registroPasajeroGenero" id="registroPasajeroGeneroM">
+                        <label class="form-check-label" for="registroPasajeroGeneroM">
+                          Masculino
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label for="registroPasajeroEmail" class="form-label">Email</label>
+                  <input type="text" class="form-control" id="registroPasajeroEmail" value="email@email.com" required>
+                </div>
+                <div class="col-12">
+                  <label for="registroPasajeroTel" class="form-label">Celular</label>
+                  <input type="text" class="form-control" id="registroPasajeroTel" placeholder="+569" value="+56987654321" required>
+                </div>
+                <div class="col-12 select-button-container justify-content-between">
+                  <button type="button" class="btn btn-outline-primary"><span class="iconify me-3" data-icon="heroicons:adjustments-horizontal" data-width="32" data-height="32"></span>Editar</button>
+                  <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" onclick="setTimeout(function() { $('#seat-res-success').modal('show'); }, 1000);">Siguiente</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Datos Pasajero - Reserva Exitosa -->
+    <div class="modal fade" id="seat-res-success" tabindex="-1" role="dialog" aria-labelledby="qué hacer con asiento seleccionado" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="text-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="126" height="94" viewBox="0 0 126 94" fill="none">
+                <path d="M42.4647 91.403L1.8309 50.7692C-0.610301 48.328 -0.610301 44.3699 1.8309 41.9285L10.6714 33.0877C13.1126 30.6462 17.071 30.6462 19.5122 33.0877L46.8851 60.4603L105.515 1.8309C107.956 -0.610301 111.914 -0.610301 114.356 1.8309L123.196 10.6717C125.637 13.1129 125.637 17.071 123.196 19.5125L51.3055 91.4033C48.864 93.8445 44.9059 93.8445 42.4647 91.403Z" fill="#A561B7"/>
+              </svg>
+            </div>
+            <div class="modal-title text-center mt-4">Se ha reservado de forma exitosa</div>
+            <div class="d-flex justify-content-evenly py-4">
+              <span>Orden: XXXX</span>
+              <span>Nombre Apellido</span>
+              <span>Código: XXXXXX</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   
   <script src="./js/jquery-3.6.0.js"></script>
   <script src="./js/base-scripts.min.js"></script>
