@@ -64,13 +64,12 @@ gulp.task("scripts base", function(){
         .pipe(jshint())
         .pipe(plumber({errorHandler:onError}))
         .pipe(concat("base-scripts.min.js"))
-        .pipe(uglify({
-            mangle: true,
-            output: {
-                // beautify: true,
-                comments: /^!/
-            }
-        }))
+        // .pipe(uglify({
+        //     output: {
+        //         // beautify: true,
+        //         comments: /^!/
+        //     }
+        // }))
         .pipe(sourcemaps.write("."))
         .pipe(gulp.dest("./js"));
         // .pipe(notify({message: "Scripts librerías finalizados", onLast: true}));

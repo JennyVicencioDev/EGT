@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/base-styles.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Condor - Pasajes</title>
+</head>
+<body>
+  <div class="main-menu">
+    <nav class="navbar navbar-expand-lg navbar-light p-lg-0">
+        <div class="container-fluid">
+            <div class="main-menu__logo">
+              <a class="navbar-brand" href="./index.html">
+                <img src="./img/logo-condor-dark.svg" alt="logo Condor">
+              </a>
+            </div>
+            <div class="main-menu__profile">
+              <ul>
+                <li>
+                  <!-- eliminar class 'has message' si no hay mensajes -->
+                  <a href="/notifications" class="btn-message has-message" aria-label="Toggle navigation">
+                    <span class="iconify notification-icon" data-icon="eva:message-circle-fill" data-width="32" data-height="32">2</span>
+                    <span class="notification-badge">2</span>
+                  </a>
+                </li>
+                <li>
+                   <a nohref class="btn-profile" aria-label="Toggle navigation">
+                    <span class="iconify me-2" data-icon="fa-solid:user-circle" data-width="32" data-height="32"></span>Lorem Ipsum
+                  </a>
+                  <ul class="main-menu-submenu">
+                    <li>
+                      <a href="">Editar Perfil</a>
+                    </li>
+                    <li>
+                      <a href="">Cerrar sesión</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="main-menu__toggler">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarID"
+                  aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+            <div class="main-menu__links">
+              <div class="collapse navbar-collapse" id="navbarID">
+                  <ul class="navbar-nav">
+                    <li>
+                      <a class="nav-link" aria-current="page" href="#">Boletos</a>
+                    </li>
+                    <li>
+                      <a class="nav-link active" aria-current="page" href="#">Pasajes</a>
+                      <ul class="main-menu-submenu">
+                        <li>
+                          <a href="/venta">Venta</a>
+                        </li>
+                        <li>
+                          <a href="/reserva">Reserva</a>
+                        </li>
+                        <li>
+                          <a href="/tour-club">Tour club</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a class="nav-link" aria-current="page" href="#">E-Tickets</a></li>
+                    <li><a class="nav-link" aria-current="page" href="#">Otras ventas y servicios</a></li>
+                    <li><a class="nav-link" aria-current="page" href="#">Confirmación pasaje</a></li>
+                  </ul>
+              </div>
+            </div>
+        </div>
+    </nav>
+  </div>
+  <main class="main-content">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Menú</a></li>
+          <li class="breadcrumb-item"><a href="/pasajes">Pasajes</a></li>
+          <li class="breadcrumb-item"><a href="/pasajes/venta">Venta</a></li>
+        </ul>
+      </nav>
+      <h1>Pasajes</h1>
+      <div class="row">
+        <div class="col-12">
+          <div class="ticket-info-container">
+            <div class="ticket-info">
+              <div class="ticket-info__route">
+                <div class="row">
+                  <div class="col-12 col-md-5 col-lg-3 mb-4">
+                    <div class="form-group">
+                      <label for="origenViaje" class="form-label">Ingrese Origen</label>
+                      <select class="form-select" id="origenViaje">
+                        <option selected value="">Origen</option>
+                        <option value="">Santiago (SAN)</option>
+                        <option value="">San Fernando (SFR)</option>
+                        <option value="">San Carlos (SCR)</option>
+                        <option value="">San Antonio (SAR)</option>
+                        <option value="">...</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-1 mb-4">
+                    <div class="d-flex justify-content-center p-2 h-100">
+                      <span class="iconify mt-auto" data-icon="fluent:arrow-swap-20-regular" style="color: #a561b7;" data-width="36" data-height="36"></span>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-5 col-lg-3 mb-4">
+                    <div class="form-group">
+                      <label for="destinoViaje" class="form-label">Ingrese Destino</label>
+                      <select class="form-select" id="destinoViaje">
+                        <option selected value="">Destino</option>
+                        <option value="">Santiago (SAN)</option>
+                        <option value="">San Fernando (SFR)</option>
+                        <option value="">San Carlos (SCR)</option>
+                        <option value="">San Antonio (SAR)</option>
+                        <option value="">...</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ticket-info__date">
+                <div class="row">
+                  <div class="col-12 col-md-5 col-lg-3 mb-4">
+                    <div class="form-group" id="formIda">
+                      <label for="fechaViaje" class="form-label">Fecha Ida</label>
+                      <input type="text" class="form-control is-datepicker" placeholder="Fecha">
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-1 mb-4"></div>
+                  <div class="col-12 col-md-5 col-lg-3 mb-4">
+                    <div class="form-group is-visible" id="formIdaVuelta">
+                      <label for="fechaViaje" class="form-label">Fecha Vuelta</label>
+                      <input type="text" class="form-control is-datepicker" placeholder="Fecha">
+                    </div>
+                  </div>
+                  <div class="col-12 mb-4">
+                    <div class="form-group">
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" name="checkIdaVuelta" id="IdaViaje" type="radio" value="ida" aria-label="selector ida y vuelta" onclick="$('#formIdaVuelta').removeClass('is-visible');">Ida
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" name="checkIdaVuelta" id="IdaVueltaViaje" type="radio" value="idayvuelta" aria-label="selector ida y vuelta" onclick="$('#formIdaVuelta').addClass('is-visible');">Ida y vuelta
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 mb-4">
+                    <div class="form-group">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="sFecha">
+                        <label class="form-check-label" for="sFecha">
+                          Aún no decide fecha
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="cFecha">
+                        <label class="form-check-label" for="cFecha">
+                          Comprar pasajes en blanco
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ticket-info__passengers">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label for="pasajerosViaje" class="form-label">Cantidad Pasajeros</label>
+                      <div class="input-group input-counter">
+                        <button class="btn btn-primary" type="button" onclick="if($('#cantPasajerosViaje').val() > 0){$('#cantPasajerosViaje').val(parseInt($('#cantPasajerosViaje').val()) - 1)}">-</button>
+                        <!-- añadir capacidad max -->
+                        <input type="number" class="form-control" placeholder="1" id="cantPasajerosViaje" aria-label="cantidad de pasajeros" min="1" max="100" maxlength="2" value="1">
+                        <button class="btn btn-primary" type="button" onclick="if($('#cantPasajerosViaje').val() < 100){$('#cantPasajerosViaje').val(parseInt($('#cantPasajerosViaje').val()) + 1)}">+</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="main-controls">
+    <div class="container">
+      <div class="main-controls--buttons">
+        <div class="prev-button">
+          <a class="btn btn-outline-primary" href="pasajes-venta-origen-destino.html" role="button">Volver</a>
+        </div>
+        <div class="next-button">
+          <a class="btn btn-primary" href="pasajes-venta-asientos.html" role="button">Continuar</a>
+        </div>
+      </div>
+      <div class="main-controls--commands mt-4">
+        <div>Volver: F1</div>
+        <div>Cancelar(X): ESC</div>
+        <div>Siguiente: ENTER</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Detalle Itinerario-->
+  <div class="modal fade" id="itinerary-1" tabindex="-1" role="dialog" aria-labelledby="detalle itinerario" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="itinerary-detail">
+            <p class="itinerary-seats mb-2">Asientos disponibles: <strong>20</strong></p>
+            <p class="itinerary-date">Fecha: <strong>23/01/2023</strong></p>
+            <div class="itinerary-route-v mb-3">
+              <div class="route-line">
+                <span class="start"></span>
+                <span class="sp"></span>
+                <span class="stop"></span>
+                <span class="sp"></span>
+                <span class="end"></span>
+              </div>
+              <div class="route-time">
+                <span class="start-time">08:30 Hrs.</span>
+                <span class="stop-time">09:30 Hrs.</span>
+                <span class="end-time">10:00 Hrs.</span>
+              </div>
+              <div class="route-fromto">
+                <div class="start-station">
+                  <span class="from">Origen</span>
+                  <span class="station">Terminal</span>
+                </div>
+                <div class="stop-station">
+                  <span class="st">Parada</span>
+                  <span class="station">Terminal</span>
+                </div>
+                <div class="end-station">
+                  <span class="to">Destino</span>
+                  <span class="station">Terminal</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="itinerary-bus-type">Tipo de asiento: <span class="bus-type-name">Semi Cama</span></p>
+            <p class="itinerary-service">Servicio: <img src="./img/logo-condor-dark.svg" class="bus-logo" alt="logo Condor">
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="./js/jquery-3.6.0.js"></script>
+  <script src="./js/base-scripts.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>

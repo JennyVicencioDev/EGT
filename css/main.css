@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Author: Agencia Rompecabeza Digital
 Author URL: https://www.rompecabeza.cl/
@@ -119,6 +120,28 @@ main ::-webkit-scrollbar-track {
   background-color: #fff;
   color: #FFC629;
   border: 1px solid #A561B7;
+}
+
+.input-counter {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.input-counter input[type=number] {
+  border: none;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  text-align: center;
+  width: 3rem;
+  margin: 0 0.5rem !important;
+}
+.input-counter button {
+  border-radius: 50% !important;
+  line-height: 1.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 0;
 }
 
 /*------------------------------------------------------------
@@ -370,13 +393,59 @@ main ::-webkit-scrollbar-track {
 /*------------------------------------------------------------
 # PAGES
 ------------------------------------------------------------*/
-/* Pasajes */
+/** PASAJES - ORIGEN/DESTINO **/
+.ticket-info {
+  padding: 2rem 0;
+}
+.ticket-info .form-group {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ticket-info input, .ticket-info select {
+  max-width: 300px;
+}
+.ticket-info__date .form-check input {
+  margin-right: 0.5rem;
+}
+.ticket-info__date .form-group#formIdaVuelta {
+  display: none;
+}
+.ticket-info__date .form-group#formIdaVuelta.is-visible {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .ticket-info .form-group {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .ticket-info__date .form-check {
+    display: inline-block;
+  }
+  .ticket-info__date .form-check:not(:last-child) {
+    margin-right: 2rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .ticket-info label:not(.form-check-label) {
+    font-size: 1.875rem;
+    line-height: 1;
+  }
+}
+
+/** PASAJES - FLUJO RUTAS Y HORARIOS **/
 .itinerary-filter {
   padding: 2rem 0;
 }
-.itinerary-filter label {
-  font-size: 1.875rem;
-  line-height: 1;
+.itinerary-filter input, .itinerary-filter select {
+  max-width: 300px;
+}
+@media screen and (min-width: 992px) {
+  .itinerary-filter label {
+    font-size: 1.875rem;
+    line-height: 1;
+  }
 }
 
 .itinerary-list-orderby {
@@ -621,6 +690,7 @@ main ::-webkit-scrollbar-track {
   width: 100px;
 }
 
+/** PASAJES - FLUJO SELECCIÓN ASIENTOS **/
 .bus-steering-wheel {
   display: inline-block;
   height: 40px;
@@ -886,6 +956,7 @@ main ::-webkit-scrollbar-track {
           transform: translate(-50%, -50%);
 }
 
+/** PASAJES - FLUJO LISTA PASAJEROS **/
 .passengers-list-container .accordion {
   height: 680px;
   overflow: auto;
@@ -905,6 +976,7 @@ main ::-webkit-scrollbar-track {
   border: none;
 }
 
+/** PASAJES - CONTROLES NAVEGACIÓN **/
 .main-controls {
   margin-top: 1rem;
   margin-bottom: 2rem;

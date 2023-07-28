@@ -58,3 +58,23 @@
       }
    }
 }
+
+.input-counter {
+   align-items: center;
+
+   input[type=number] {
+      border: none;
+      flex: 0 1 auto;
+      text-align: center;
+      width: 3rem;
+      margin: 0 .5rem!important;
+   }
+   button {
+      border-radius: 50%!important;
+      line-height: 1.5rem;
+      height: 1.5rem;
+      width: 1.5rem;
+      padding: 0;
+   }
+
+}
