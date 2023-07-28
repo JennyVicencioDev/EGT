@@ -60,7 +60,7 @@ gulp.task("lint", function(){
 });
 
 gulp.task("scripts base", function(){
-    return gulp.src("./js/vendors/**/*.js")
+    return gulp.src("./js/libs/**/*.js")
         .pipe(jshint())
         .pipe(plumber({errorHandler:onError}))
         .pipe(concat("base-scripts.min.js"))

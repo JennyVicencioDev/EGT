@@ -1,11 +1,11 @@
 // Paleta Tema
-$dark-purple-condor:  #622A74;
-$purple-condor:  #A561B7;
-$yellow-condor:  #FFC629;
-$red-condor:  #FF0000;
-$blue-condor: #5599FF;
-$yellow-condor:  #FFC629;
-$green-condor:   #35CD00;
+$dark-purple:  #622A74;
+$purple:  #A561B7;
+$yellow:  #FFC629;
+$red:  #FF0000;
+$blue: #5599FF;
+$yellow:  #FFC629;
+$green:   #35CD00;
 
 // $gradient: linear-gradient(90deg, $blue 19.55%, $light-blue 80.65%);
 
@@ -17,8 +17,8 @@ $gray-800: #404040;
 
 $body-text: #737373;
 
-$primary: $purple-condor;
-$secondary: $yellow-condor;
+$primary: $purple;
+$secondary: $yellow;
 
 // breakpoints
 $sm: #{'min-width: 576px'};

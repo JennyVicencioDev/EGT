@@ -87,12 +87,14 @@
       <h1>Pasajes</h1>
       <div class="row">
         <div class="col-12 col-sm-4 col-lg-2">
-          <div class="card card-seats--num">
-            <div class="card-body">
-              <p class="text-center">Digite el número de asiento</p>
-              <div class="input-seat-num" aria-describedby="número de asiento">
-                <input type="text" class="form-control" pattern="\d*" maxlength="1" minlength="1">
-                <input type="text" class="form-control" pattern="\d*" maxlength="1" minlength="1">
+          <div class="seats-cards-container">
+            <div class="card card-seats--num">
+              <div class="card-body">
+                <p class="text-center">Digite el número de asiento</p>
+                <div class="input-seat-num" aria-describedby="número de asiento">
+                  <input type="text" class="form-control" pattern="\d*" maxlength="1" minlength="1">
+                  <input type="text" class="form-control" pattern="\d*" maxlength="1" minlength="1">
+                </div>
               </div>
             </div>
           </div>
@@ -242,48 +244,50 @@
           </div>
         </div>
         <div class="col-12 col-lg-6">
-          <div class="row justify-content-center">
-            <div class="col-auto">
-              <div class="card card-seats--simb">
-                <div class="card-body">
-                  <h3>Simbología</h3>
-                  <div class="seats-simb-container">
-                    <ul class="seats-simb-list">
-                      <li><span class="seat seat--blue">10</span><strong>$22.800</strong></li>
-                      <li><span class="seat seat--green">10</span><strong>$20.700</strong></li>
-                      <li><span class="seat seat--purple">10</span><strong>$22.400</strong></li>
-                      <li><span class="seat seat--na"></span>No disponible</li>
-                      <li><span class="seat seat--purple selected">10</span>Seleccionado</li>
-                      <li><span class="seat seat--locked">14</span>Bloqueado</li>
-                      <li><span class="seat seat--cashier"></span>Cajero</li>
-                    </ul>
+          <div class="seats-cards-container">
+            <div class="row justify-content-center">
+              <div class="col-auto">
+                <div class="card card-seats--simb">
+                  <div class="card-body">
+                    <h3>Simbología</h3>
+                    <div class="seats-simb-container">
+                      <ul class="seats-simb-list">
+                        <li><span class="seat seat--blue">10</span><strong>$22.800</strong></li>
+                        <li><span class="seat seat--green">10</span><strong>$20.700</strong></li>
+                        <li><span class="seat seat--purple">10</span><strong>$22.400</strong></li>
+                        <li><span class="seat seat--na"></span>No disponible</li>
+                        <li><span class="seat seat--purple selected">10</span>Seleccionado</li>
+                        <li><span class="seat seat--locked">14</span>Bloqueado</li>
+                        <li><span class="seat seat--cashier"></span>Cajero</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-auto">
-              <div class="card card-seats--select">
-                <div class="card-body">
-                  <h3>Asientos Seleccionados</h3>
-                  <div class="seats-summary">
-                    <table class="table mb-0">
-                      <tbody>
-                        <tr>
-                          <td class="passenger-num">Pasajero 1</td>
-                          <td class="passenger-seat">27</td>
-                        </tr>
-                        <tr>
-                          <td class="passenger-num">Pasajero 2</td>
-                          <td class="passenger-seat">28</td>
-                        </tr>
-                      </tbody>
-                      <tfoot>
-                        <tr>
-                          <td><div class="bus-type-name">Semi Cama</div></td>
-                          <td>Total: <span class="total-num">$44.800</span></td>
-                        </tr>
-                      </tfoot>
-                    </table>
+              <div class="col-auto">
+                <div class="card card-seats--select">
+                  <div class="card-body">
+                    <h3>Asientos Seleccionados</h3>
+                    <div class="seats-summary">
+                      <table class="table mb-0">
+                        <tbody>
+                          <tr>
+                            <td class="passenger-num">Pasajero 1</td>
+                            <td class="passenger-seat">27</td>
+                          </tr>
+                          <tr>
+                            <td class="passenger-num">Pasajero 2</td>
+                            <td class="passenger-seat">28</td>
+                          </tr>
+                        </tbody>
+                        <tfoot>
+                          <tr>
+                            <td><div class="bus-type-name">Semi Cama</div></td>
+                            <td>Total: <span class="total-num">$44.800</span></td>
+                          </tr>
+                        </tfoot>
+                      </table>
+                    </div>
                   </div>
                 </div>
               </div>

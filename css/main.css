@@ -389,52 +389,81 @@ main ::-webkit-scrollbar-track {
 .card-itinerary .card-body {
   padding: 1rem 8%;
 }
+.card-summary {
+  width: 100%;
+}
+.card-summary .card-body {
+  padding: 3rem;
+}
+.card-summary h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.card-summary h4 {
+  font-size: 1rem;
+  color: #A561B7;
+  margin-bottom: 0.75rem;
+}
+.card-summary p {
+  line-height: 1.2;
+}
 
 /*------------------------------------------------------------
 # PAGES
 ------------------------------------------------------------*/
 /** PASAJES - ORIGEN/DESTINO **/
-.ticket-info {
+.ticket-info-container {
   padding: 2rem 0;
 }
-.ticket-info .form-group {
+.ticket-info-container .ticket-info .form-group {
   max-width: 300px;
   margin-left: auto;
   margin-right: auto;
 }
-.ticket-info input, .ticket-info select {
+.ticket-info-container .ticket-info input, .ticket-info-container .ticket-info select {
   max-width: 300px;
 }
-.ticket-info__date .form-check input {
+.ticket-info-container .ticket-info input::-webkit-outer-spin-button,
+.ticket-info-container .ticket-info input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+  margin: 0;
+}
+.ticket-info-container .ticket-info input[type=number] {
+  -webkit-appearance: none;
+          appearance: none;
+  -moz-appearance: textfield;
+}
+.ticket-info-container .ticket-info__date .form-check input {
   margin-right: 0.5rem;
 }
-.ticket-info__date .form-group#formIdaVuelta {
+.ticket-info-container .ticket-info__date .form-group#formIdaVuelta {
   display: none;
 }
-.ticket-info__date .form-group#formIdaVuelta.is-visible {
+.ticket-info-container .ticket-info__date .form-group#formIdaVuelta.is-visible {
   display: block;
 }
 @media screen and (min-width: 768px) {
-  .ticket-info .form-group {
+  .ticket-info-container .ticket-info .form-group {
     max-width: 100%;
     margin-left: 0;
     margin-right: 0;
   }
-  .ticket-info__date .form-check {
+  .ticket-info-container .ticket-info__date .form-check {
     display: inline-block;
   }
-  .ticket-info__date .form-check:not(:last-child) {
+  .ticket-info-container .ticket-info__date .form-check:not(:last-child) {
     margin-right: 2rem;
   }
 }
 @media screen and (min-width: 992px) {
-  .ticket-info label:not(.form-check-label) {
+  .ticket-info-container .ticket-info label:not(.form-check-label) {
     font-size: 1.875rem;
     line-height: 1;
   }
 }
 
-/** PASAJES - FLUJO RUTAS Y HORARIOS **/
+/*** PASAJES - FLUJO RUTAS Y HORARIOS ***/
 .itinerary-filter {
   padding: 2rem 0;
 }
@@ -690,7 +719,7 @@ main ::-webkit-scrollbar-track {
   width: 100px;
 }
 
-/** PASAJES - FLUJO SELECCIÓN ASIENTOS **/
+/*** PASAJES - FLUJO SELECCIÓN ASIENTOS ***/
 .bus-steering-wheel {
   display: inline-block;
   height: 40px;
@@ -709,6 +738,10 @@ main ::-webkit-scrollbar-track {
   display: inline-block;
   vertical-align: middle;
   margin-right: 0.5rem;
+}
+
+.seats-cards-container {
+  padding: 2rem 0;
 }
 
 .seats-container {
@@ -956,7 +989,10 @@ main ::-webkit-scrollbar-track {
           transform: translate(-50%, -50%);
 }
 
-/** PASAJES - FLUJO LISTA PASAJEROS **/
+/*** PASAJES - FLUJO LISTA PASAJEROS ***/
+.passengers-list-container {
+  padding: 2rem 0;
+}
 .passengers-list-container .accordion {
   height: 680px;
   overflow: auto;
@@ -976,7 +1012,43 @@ main ::-webkit-scrollbar-track {
   border: none;
 }
 
-/** PASAJES - CONTROLES NAVEGACIÓN **/
+/*** PASAJES - FLUJO PAGO ***/
+.ticket-summary-container .ticket-summary__desc:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.ticket-summary-container .ticket-summary__total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #A561B7;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 3rem;
+}
+
+.payment-method-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 3rem;
+  height: 100%;
+}
+@media screen and (min-width: 992px) {
+  .payment-method-container {
+    padding: 2.5rem 5rem;
+  }
+}
+
+/*** PASAJES - CONTROLES NAVEGACIÓN ***/
 .main-controls {
   margin-top: 1rem;
   margin-bottom: 2rem;

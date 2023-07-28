@@ -1,63 +1,74 @@
 @use "../utils/variables";
 
 /** PASAJES - ORIGEN/DESTINO **/
-.ticket-info {
+.ticket-info-container {
    padding: 2rem 0;
 
-   .form-group {
-      max-width: 300px;
-      margin-left: auto;
-      margin-right: auto;
-   }
-
-   input, select {
-      max-width: 300px;
-   }
-
-   &__date {
-      .form-check {
-         // padding-left: 0;
-         input {
-            // margin-left: 0;
-            margin-right: .5rem;
-         }
-      }
+   .ticket-info {
       .form-group {
-         &#formIdaVuelta {
-            display: none;
-            &.is-visible {
-               display: block;
-            }
-         }
+         max-width: 300px;
+         margin-left: auto;
+         margin-right: auto;
       }
-   }
-
-   @media screen and (min-width: 768px) {
-      .form-group {
-         max-width: 100%;
-         margin-left: 0;
-         margin-right: 0;
+   
+      input, select {
+         max-width: 300px;
       }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+         appearance: none; //quitar flechas pr defecto del input number
+         margin: 0;
+      }
+      input[type=number] {
+         appearance: none;
+         -moz-appearance: textfield;  // Firefox
+      }
+   
       &__date {
          .form-check {
-            display: inline-block;
-   
-            &:not(:last-child) {
-               margin-right: 2rem;
+            // padding-left: 0;
+            input {
+               // margin-left: 0;
+               margin-right: .5rem;
+            }
+         }
+         .form-group {
+            &#formIdaVuelta {
+               display: none;
+               &.is-visible {
+                  display: block;
+               }
             }
          }
       }
-   }
-
-   @media screen and (min-width: 992px) {
-      label:not(.form-check-label) {
-         font-size: 1.875rem;
-         line-height: 1;
+   
+      @media screen and (min-width: 768px) {
+         .form-group {
+            max-width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+         }
+         &__date {
+            .form-check {
+               display: inline-block;
+      
+               &:not(:last-child) {
+                  margin-right: 2rem;
+               }
+            }
+         }
+      }
+   
+      @media screen and (min-width: 992px) {
+         label:not(.form-check-label) {
+            font-size: 1.875rem;
+            line-height: 1;
+         }
       }
    }
 }
 
-/** PASAJES - FLUJO RUTAS Y HORARIOS **/
+/*** PASAJES - FLUJO RUTAS Y HORARIOS ***/
 .itinerary-filter {
    padding: 2rem 0;
 
@@ -201,7 +212,6 @@
    }
 }
 
-
 .itinerary-route {
    &-h {
       display: flex;
@@ -300,9 +310,7 @@
    }
 }
 
-
-/** PASAJES - FLUJO SELECCIÓN ASIENTOS **/
-
+/*** PASAJES - FLUJO SELECCIÓN ASIENTOS ***/
 .bus-steering-wheel {
    display: inline-block;
    height: 40px;
@@ -322,6 +330,11 @@
       margin-right: .5rem;
    }
 }
+
+.seats-cards-container {
+   padding: 2rem 0;
+}
+
 // alineación de asientos
 .seats-container {
    background-color: variables.$white;
@@ -387,7 +400,7 @@
             display: block;
             height: 100%;
             width: 40px;
-            background-color: rgba(variables.$purple-condor, 0.5);
+            background-color: rgba(variables.$purple, 0.5);
             background-image: url(./../img/bg-dots.png);
          }
       }
@@ -430,6 +443,7 @@
       }
    }
 }
+
 // simbología de asientos
 .seats-simb-container {
    & > * {
@@ -455,6 +469,7 @@
       }
    }
 }
+
 // resumen de asientos
 .seats-summary {
    .bus-type-name {
@@ -490,12 +505,13 @@
       font-size: 1.75rem;
    }
 }
+
 // tipos de asientos del bus
 .seat {
    border-radius: 6px;
    border-style: solid;
    border-width: 1px;
-   border-color: variables.$purple-condor;
+   border-color: variables.$purple;
    display: inline-block;
    font-size: 0.75rem;
    font-weight: 400;
@@ -507,23 +523,23 @@
    vertical-align: middle;
 
    &--blue {
-      border-color: variables.$blue-condor;
+      border-color: variables.$blue;
       &.selected {
-         background-color: variables.$blue-condor;
+         background-color: variables.$blue;
          color: variables.$white;
       }
    }
    &--purple {
-      border-color: variables.$purple-condor;
+      border-color: variables.$purple;
       &.selected {
-         background-color: variables.$purple-condor;
+         background-color: variables.$purple;
          color: variables.$white;
       }
    }
    &--green {
-      border-color: variables.$green-condor;
+      border-color: variables.$green;
       &.selected {
-         background-color: variables.$green-condor;
+         background-color: variables.$green;
          color: variables.$white;
       }
    }
@@ -555,7 +571,7 @@
       }
    }
    &--cashier {
-      border-color: variables.$purple-condor;
+      border-color: variables.$purple;
       &:after {
          content: '';
          background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='22' viewBox='0 0 20 22' fill='none'%3E%3Cpath d='M13.3217 2.42396C12.4286 1.45971 11.1812 0.928711 9.80433 0.928711C8.42015 0.928711 7.16861 1.4565 6.27963 2.41478C5.38101 3.38361 4.94318 4.70033 5.04598 6.12214C5.24975 8.92722 7.38431 11.2091 9.80433 11.2091C12.2244 11.2091 14.3552 8.92768 14.5622 6.12306C14.6664 4.7141 14.2258 3.40014 13.3217 2.42396Z' fill='%23A561B7'/%3E%3Cpath d='M17.8822 21.4903H1.72675C1.51529 21.493 1.30588 21.4486 1.11375 21.3603C0.921615 21.2719 0.751598 21.1418 0.616065 20.9795C0.31774 20.6229 0.197492 20.1359 0.286531 19.6434C0.673894 17.4946 1.8828 15.6895 3.7829 14.4223C5.47096 13.2974 7.60927 12.6782 9.80448 12.6782C11.9997 12.6782 14.138 13.2978 15.8261 14.4223C17.7262 15.689 18.9351 17.4941 19.3224 19.643C19.4115 20.1354 19.2912 20.6224 18.9929 20.979C18.8574 21.1414 18.6874 21.2716 18.4953 21.36C18.3031 21.4485 18.0937 21.493 17.8822 21.4903Z' fill='%23A561B7'/%3E%3C/svg%3E");
@@ -570,9 +586,9 @@
    }
 }
 
-/** PASAJES - FLUJO LISTA PASAJEROS **/
-
+/*** PASAJES - FLUJO LISTA PASAJEROS ***/
 .passengers-list-container {
+   padding: 2rem 0;
    .accordion {
       height: 680px;
       overflow: auto;
@@ -595,8 +611,37 @@
    }
 }
 
-/** PASAJES - CONTROLES NAVEGACIÓN **/
+/*** PASAJES - FLUJO PAGO ***/
+.ticket-summary-container {
+   .ticket-summary {
+      &__desc {
+         &:not(:last-child) {
+            margin-bottom: 2rem;
+         }
+      }
+      &__total {
+         display: flex;
+         justify-content: space-between;
+         color: variables.$primary;
+         font-size: 1.25rem;
+         font-weight: 700;
+         margin-top: 3rem;
+      }
+   }
+}
+.payment-method-container {
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   padding: 3rem;
+   height: 100%;
 
+   @media screen and (min-width: 992px) {
+      padding: 2.5rem 5rem;
+   }
+}
+
+/*** PASAJES - CONTROLES NAVEGACIÓN ***/
 .main-controls {
    margin-top: 1rem;
    margin-bottom: 2rem;
