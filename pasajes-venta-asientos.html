@@ -323,7 +323,7 @@
             <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <div class="modal-title text-center">¿Qué desea hacer con este asiento?</div>
+            <div class="modal-title text-center">¿Qué desea hacer con este(os) asiento(s)?</div>
             <div class="select-button-container">
               <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#seat-step-2-vta">Vender</button>
               <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#seat-step-2-res">Reservar</button>
@@ -517,7 +517,8 @@
     </div>
 
     <!-- Modal Datos Pasajero - Reserva Exitosa -->
-    <div class="modal fade" id="seat-res-success" tabindex="-1" role="dialog" aria-labelledby="qué hacer con asiento seleccionado" aria-hidden="true">
+    <div class="modal fade" id="seat-res-success" tabindex="-1" role="dialog" aria-labelledby="qué hacer con asiento seleccionado" aria-hidden="true" onshow="">
+
       <div class="modal-dialog modal-dialog-centered modal-md" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -543,5 +544,16 @@
   <script src="./js/jquery-3.6.0.js"></script>
   <script src="./js/base-scripts.min.js"></script>
   <script src="./js/main.js"></script>
+  
+  <script>
+    $(function () {
+      $('#seat-res-success').on('shown.bs.modal', function(){
+        console.log($(this));
+        setTimeout(() => {
+          location.href = 'pasajes-venta-pago.html';    
+        }, 1000);
+      });
+    })
+      </script>
 </body>
 </html>

@@ -102,7 +102,9 @@
 
    .card-itinerary {
       margin-bottom: 1rem;
-      &:hover {
+      cursor: pointer;
+
+      &.selected {
          background-color: variables.$primary;
          color: variables.$white;
          border-color: variables.$primary;
@@ -626,6 +628,8 @@
 
 /*** PASAJES - FLUJO PAGO ***/
 .ticket-summary-container {
+   padding: 2rem 0;
+
    .ticket-summary {
       &__desc {
          &:not(:last-child) {
@@ -646,7 +650,7 @@
    display: flex;
    align-items: center;
    justify-content: flex-start;
-   padding: 3rem;
+   padding: 1rem 2rem;
    height: 100%;
 
    @media screen and (min-width: 992px) {
@@ -675,7 +679,7 @@
       font-weight: 700;
    }
    
-   @media screen and (min-width: 768px) {
+   @media screen and (min-width: 576px) {
       // margin-top: 0;
 
       &--buttons,
